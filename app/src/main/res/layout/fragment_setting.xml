@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+
+             tools:context=".fragment.SettingFragment">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:text="设置"
+                android:layout_width="match_parent"
+                android:layout_height="65dp" android:id="@+id/textView" android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/xui_config_color_75_white"
+                android:background="@color/xui_btn_blue_normal_color"
+                android:fontFamily="@font/ubuntu_light"/>
+        <com.xuexiang.xui.widget.button.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rv_type="simpleRipple">
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/setting_down_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:sDividerLineType="both"
+                    app:sLeftBottomTextString="/path/as/as"
+                    app:sLeftTopTextString="下载路径"
+                    app:sLeftTopTextSize="15sp"
+                    app:sLeftBottomTextSize="13sp"
+                    app:sLeftViewGravity="left_center"
+                    app:sLeftBottomTextColor="@color/design_default_color_secondary"/>
+        </com.xuexiang.xui.widget.button.RippleView>
+        <com.xuexiang.xui.widget.button.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rv_type="simpleRipple">
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/setting_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:sDividerLineType="both"
+                    app:sLeftBottomTextString="未设置"
+                    app:sLeftTopTextString="定时关闭"
+                    app:sLeftViewGravity="left_center"
+                    app:sLeftTopTextSize="15sp"
+                    app:sLeftBottomTextSize="13sp"
+                    app:sLeftBottomTextColor="@color/design_default_color_secondary"/>
+        </com.xuexiang.xui.widget.button.RippleView>
+        <com.xuexiang.xui.widget.button.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rv_type="simpleRipple">
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/setting_clear_cache"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:sLeftViewGravity="left_center"
+                    app:sDividerLineType="both"
+                    app:sLeftBottomTextString="25mb"
+                    app:sLeftTopTextString="清除缓存"
+                    app:sLeftTopTextSize="15sp"
+                    app:sLeftBottomTextSize="13sp"
+                    app:sLeftBottomTextColor="@color/design_default_color_secondary"/>
+        </com.xuexiang.xui.widget.button.RippleView>
+    </LinearLayout>
+</FrameLayout>

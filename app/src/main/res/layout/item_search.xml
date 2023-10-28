@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:padding="10dp"
+              android:background="@color/white"
+              android:layout_height="70dp">
+
+
+
+    <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+            android:id="@+id/item_search_metadata"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:sLeftViewGravity="left_center"
+            app:sLeftTopTextString="莫失莫忘"
+            app:sLeftBottomTextString="麦振鸿"
+            app:sLeftTopTextSize="15sp"
+            app:sLeftBottomTextSize="13sp"
+    />
+
+    <com.xuexiang.xui.widget.imageview.RadiusImageView
+            android:id="@+id/item_search_play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/play01"
+
+            app:riv_is_circle="true"
+            app:riv_selected_mask_color="@color/xui_config_color_gray_8"/>
+    <com.xuexiang.xui.widget.imageview.RadiusImageView
+            android:id="@+id/item_search_download"
+            android:clickable="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/down01"
+            app:riv_is_circle="true"
+            app:riv_selected_mask_color="@color/xui_config_color_gray_8"
+            android:focusable="true"/>
+    <com.xuexiang.xui.widget.imageview.RadiusImageView
+            android:id="@+id/item_search_add_to_playlist"
+            android:clickable="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/coll01"
+            app:riv_is_circle="true"
+            app:riv_selected_border_width="1px"
+            app:riv_selected_mask_color="@color/xui_config_color_gray_8" android:focusable="true"/>
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.x_music">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+            android:name=".activity.ContextApp"
+            android:allowBackup="true"
+            android:dataExtractionRules="@xml/data_extraction_rules"
+            android:fullBackupContent="@xml/backup_rules"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name"
+            android:roundIcon="@drawable/app_icon"
+            android:theme="@style/Theme.XMusic"
+            android:usesCleartextTraffic="true"
+            tools:targetApi="31">
+        <activity
+                android:name=".activity.PlayListDetailActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".MainActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 注册BroadcastReceiver -->
+        <receiver android:name=".service.ReminderReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".service.ReminderService" android:enabled="true" android:exported="false"/>
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts"/>
+        <meta-data
+                android:name="DATABASE"
+                android:value="data.db"/>
+        <meta-data
+                android:name="VERSION"
+                android:value="1"/>
+        <meta-data
+                android:name="QUERY_LOG"
+                android:value="false"/>
+        <meta-data
+                android:name="DOMAIN_PACKAGE_NAME"
+                android:value="com.example"/>
+    </application>
+
+</manifest>

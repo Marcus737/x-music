@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+         >
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+                android:text="歌单"
+                android:layout_width="match_parent"
+                android:layout_height="65dp" android:id="@+id/textView" android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/xui_config_color_75_white"
+                android:background="@color/xui_btn_blue_normal_color"
+                android:fontFamily="@font/ubuntu_light"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/playlist"/>
+    </LinearLayout>
+
+</FrameLayout>

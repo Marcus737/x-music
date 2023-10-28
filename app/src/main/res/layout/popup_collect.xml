@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+    <com.xuexiang.xui.widget.button.ButtonView
+            style="@style/ButtonView.Gray"
+            android:layout_width="match_parent"
+            android:text="新建收藏"
+            android:id="@+id/popup_collect_new"
+            android:layout_height="30dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/popup_collect_list"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>

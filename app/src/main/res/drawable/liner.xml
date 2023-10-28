@@ -1,0 +1,13 @@
+<LinearGradient
+        android:id="@+id/my_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gradientRadius="375"
+        android:tileMode="repeat" xmlns:android="http://schemas.android.com/apk/res/android">
+    <GradientColorItem
+            android:color="#FF0000" />
+    <GradientColorItem
+            android:color="#00FF00" />
+    <GradientColorItem
+            android:color="#0000FF" />
+</LinearGradient>

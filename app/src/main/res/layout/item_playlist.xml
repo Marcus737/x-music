@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:padding="10dp"
+                                                   android:layout_width="match_parent"
+                                                   android:background="@color/white"
+                                                   android:layout_height="70dp">
+
+    <com.xuexiang.xui.widget.button.RippleView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rv_type="simpleRipple">
+        <LinearLayout
+                android:id="@+id/playlist_all"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    tools:srcCompat="@tools:sample/avatars"
+                    android:id="@+id/playlist_imageview_icon"/>
+
+            <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/playlist_textview_metadata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    app:sLeftViewGravity="left_center"
+                    android:layout_marginStart="15dp"
+                    app:sLeftTopTextString="歌单1"
+                    app:sLeftBottomTextString="200首"
+                    app:sLeftTopTextSize="15sp"
+
+                    app:sLeftBottomTextColor="@color/xui_config_color_light_blue_gray"
+                    app:sLeftBottomTextSize="13sp"
+            />
+        </LinearLayout>
+    </com.xuexiang.xui.widget.button.RippleView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

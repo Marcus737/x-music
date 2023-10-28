@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:text="搜索"
+                android:layout_width="match_parent"
+                android:layout_height="65dp" android:id="@+id/textView"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/xui_config_color_75_white"
+                android:background="@color/xui_btn_blue_normal_color"
+                android:fontFamily="@font/ubuntu_light"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+<!--            <com.xuexiang.xui.widget.spinner.materialspinner.MaterialSpinner-->
+<!--                    style="@style/Material.SpinnerStyle"-->
+<!--                    android:id="@+id/fragment_search_spinner"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:enabled="true"-->
+<!--                    android:background="@color/white"-->
+<!--                    app:ms_entries="@array/sort_mode_entry" />-->
+            <com.xuexiang.xui.widget.button.ButtonView
+                    style="@style/ButtonView.Green"
+                    android:text="搜索"
+                    android:id="@+id/fragment_search_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+            <com.xuexiang.xui.widget.searchview.MaterialSearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/fragment_search_view"/>
+        </LinearLayout>
+        <com.xuexiang.xui.widget.statelayout.StatefulLayout
+                android:id="@+id/fragment_search_stateful"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="#e2e2e2"
+                app:stf_animationEnabled="true"
+                app:stf_inAnimation="@android:anim/slide_in_left"
+                app:stf_outAnimation="@android:anim/slide_out_right">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fragment_search_recycle_view">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </com.xuexiang.xui.widget.statelayout.StatefulLayout>
+
+
+    </LinearLayout>
+</FrameLayout>
